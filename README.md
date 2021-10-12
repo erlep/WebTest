@@ -1,4 +1,4 @@
-# WebTest - pokus pro web v1
+# WebTest - pokus pro web v2 - gitpod
 
 toto je pokusné repo
 
