@@ -1,9 +1,16 @@
-# WebTest - pokus pro web v7
+# WebTest - pokus pro web v8
 
 toto je pokusné repo
 
 
+GitHub URL - <https://github.com/erlep/WebTest>
+
+GitPod - <https://gitpod.io/workspaces>
+
+GitPod Project - <https://gold-dormouse-vfu29ton.ws-eu18.gitpod.io/>
+
 GitHub Pages - Your site is ready to be published at <https://erlep.github.io/WebTest>
+
 
 ## Soubor
 
