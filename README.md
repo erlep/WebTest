@@ -1,7 +1,13 @@
-# WebTest - pokus pro web v2 - gitpod
+# WebTest - pokus pro web v3
 
 toto je pokusné repo
 
+
+GitHub Pages - Your site is ready to be published at https://erlep.github.io/WebTest/
+
+## Soubor
+
+test.html - https://erlep.github.io/WebTest/test.html
 
 ## GitHub URL - https://github.com/erlep/WebTest
 
