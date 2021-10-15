@@ -1,4 +1,4 @@
-# WebTest - pokus pro web v8
+# WebTest - pokus pro web v9b
 
 toto je pokusné repo
 
@@ -28,3 +28,5 @@ bbMapy.py - <zzz>
 
 
 <https://erlep.github.io/Benzin_Brno>
+
+<https://share.streamlit.io/erlep/streamlit-example>
