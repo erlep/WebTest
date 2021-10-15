@@ -1,4 +1,4 @@
-# WebTest - pokus pro web v11
+# WebTest - pokus pro web v12
 
 toto je pokusné repo
 
