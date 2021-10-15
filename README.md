@@ -1,4 +1,4 @@
-# WebTest - pokus pro web v9b
+# WebTest - pokus pro web v10
 
 toto je pokusné repo
 
