@@ -8,7 +8,7 @@ from PIL import Image
 #   to run:
 # cd /d c:\aaC\vEnv\vEnvPy
 # vEnv\Scripts\activate
-# cd /d c:\peg\UNIS\Prg\Py\PpPy\excel-webapp-streamlit\
+# cd /d C:\peg\UNIS\Prg\Py\PpPy\WebTest\
 # streamlit run aaa.py
 
 help_input = r'''
