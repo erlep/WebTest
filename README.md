@@ -1,4 +1,4 @@
-# WebTest - pokus pro web v16
+# WebTest - pokus pro web v17
 
 toto je pokusné repo
 

@@ -2,8 +2,8 @@
 
 import pandas as pd
 import streamlit as st
-import plotly.express as px
-from PIL import Image
+# import plotly.express as px
+# from PIL import Image
 
 #   to run:
 # cd /d c:\aaC\vEnv\vEnvPy
@@ -27,6 +27,6 @@ st.text('This is some text.')
 st.text(help_input)
 
 st.text('---')
-st.text('WebTest - pokus pro web v16')
+st.text('WebTest - pokus pro web v17')
 
 #
