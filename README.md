@@ -1,4 +1,4 @@
-# WebTest - pokus pro web v12
+# WebTest - pokus pro web v14
 
 toto je pokusné repo
 
@@ -15,6 +15,8 @@ GitHub Pages - Your site is ready to be published at <https://erlep.github.io/We
 ## Soubor
 
 test.html - <https://erlep.github.io/WebTest/test.html>
+bbGlobus.py - <https://erlep.github.io/WebTest/bbGlobus.py>
+
 
 bbGlobus.ipynb - <zzz>
 bbGlobus.py - <zzz>
@@ -30,3 +32,9 @@ bbMapy.py - <zzz>
 <https://erlep.github.io/Benzin_Brno>
 
 <https://share.streamlit.io/erlep/streamlit-example>
+
+## Linux
+npx chromedriver
+
+npx playwright
+
