@@ -15,7 +15,7 @@ help_input = r'''
   to run:
 cd /d c:\aaC\vEnv\vEnvPy
 vEnv\Scripts\activate
-cd /d C:\peg\z1drv\OneDrive\aaEgp_P2E2\1Drv\qqq_Prj\ppBB\
+cd /d <dir>
 streamlit run aaa.py
 '''
 
@@ -25,3 +25,8 @@ st.subheader('au tu Was the tutorial helpful?')
 st.subheader('pokus')
 st.text('This is some text.')
 st.text(help_input)
+
+st.text('---')
+st.text('WebTest - pokus pro web v16')
+
+#
