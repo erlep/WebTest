@@ -1,7 +1,8 @@
-# WebTest - pokus pro web v18
+# WebTest - pokus pro web v19
 
 BB StreamLit - <https://share.streamlit.io/erlep/webtest/main/bbWeb.py>
 
++ requirements.txt
 
 toto je pokusné repo
 
