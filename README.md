@@ -1,7 +1,11 @@
-# WebTest - pokus pro web v17
+# WebTest - pokus pro web v18
+
+BB StreamLit - <https://share.streamlit.io/erlep/webtest/main/bbWeb.py>
+
 
 toto je pokusné repo
 
+StreamLit - <https://share.streamlit.io/erlep/webtest/main/aaa.py>
 
 GitHub URL - <https://github.com/erlep/WebTest>
 

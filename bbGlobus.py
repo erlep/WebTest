@@ -1,10 +1,12 @@
 # Benzín Brno - Globus - Natural- https://www.globus.cz/brno/cerpaci-stanice-a-myci-linka.html
+from bbCFG import *
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from unicodedata import normalize
+import sys
 
 # extract - stahne stranku
 def extract(url, Key):
@@ -29,24 +31,40 @@ def extract(url, Key):
   # Prepocitani df tj. / 100
   df['Cena'] = (df['Cena'] / 100)
   # How to add a trailing zeros to a pandas dataframe column? - https://bit.ly/3D5zwUO
-  df['Cena'] = df['Cena'].map('{:.2f}'.format)
+  df['Cena'] = df['Cena'].map(bbCenaMsk.format)
   # LookUp - nalezeni hodnoty Key - https://bit.ly/3DuT59p
   Radek = df.loc[df['Name'] == Key]
   # How to get a value from a Pandas DataFrame and not the index and object type - https://bit.ly/3BhmuDc
-  Cena = Radek['Cena'].values[0]
+  try:
+    Cena = Radek['Cena'].values[0]
+  except:  # catch *all* exceptions
+    e = sys.exc_info()[0]
+    print("Error: ", e)
+    Cena = 0
+  # => float
+  Cena = float(Cena)
   return Cena
 
+# test function
+def tGlobu(url=''):
+  bbprint('tGlobu:', 'url', url)
+  if bbProduct:
+    return Globu(url)
+  else:
+    return 29.9
+
 # globus - vrati cenu za natual - https://www.globus.cz/brno/cerpaci-stanice-a-myci-linka.html
-def Globus():
+def Globu(url=''):
   url = r'https://www.globus.cz/brno/cerpaci-stanice-a-myci-linka.html'
   Key = 'Drive 95'
+  Key = 'Natural 95'  # zmena media - 26.10.2021 13:15
   Cena = extract(url, Key)
-  # print('Cena paliva -', Key, '- je:', Cena)
+  # print('Cena paliva -', Key, '- je:', Cena, '  type', type(Cena))
   return Cena
 
 # main
 def main():
-  print('def Globus(): ', Globus())
+  print('def Globu(): ', Globu())
   print('OkDone.')
 
 # name__
