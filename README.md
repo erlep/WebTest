@@ -1,4 +1,6 @@
-# WebTest - pokus pro web v19
+# WebTest - pokus pro web v20
+
+zkusim na AWS - <https://share.streamlit.io/erlep/webtest/main/bbWeb.py>
 
 BB StreamLit - <https://share.streamlit.io/erlep/webtest/main/bbWeb.py>
 

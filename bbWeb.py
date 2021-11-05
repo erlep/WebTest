@@ -39,8 +39,15 @@ df = pd.read_excel(bbXlsFlNm, sheet_name=bbXlsShNm)
 # st.dataframe(df.style.hide_index())
 # st.dataframe(df.style.highlight_max(axis=0))
 # st.dataframe(df.style.highlight_min(color='lightgreen'))
-st.dataframe(df.style.background_gradient().hide_index())
 # st.dataframe(df.style.highlight_min(subset=df['Cena']))
+# Verze s background_gradient
+st.dataframe(df.style.background_gradient().hide_index())
+#  Test
+# st.dataframe(df.style.background_gradient().hide_index())
+# st.dataframe(df)
+# st.dataframe(df.values[3])
+# st.dataframe(df.values)
+# st.dataframe(df)
 st.text('\n')
 st.text('\n')
 

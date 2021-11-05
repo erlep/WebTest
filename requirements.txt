@@ -1,6 +1,9 @@
 # Soubor requirements.txt - https://pip.pypa.io/en/stable/user_guide/
 #
 # pip install -r requirements.txt
+
+# verze BB
+
 # Zaklad
 pylint
 selenium
@@ -11,6 +14,9 @@ lxml  # potrebuje Python 3.9 a pandas
 openpyxl
 ipykernel
 
+# web
+streamlit
+
 # vEnv
 Playwright
 Pyppeteer
@@ -18,5 +24,4 @@ requests_html
 scrapingant_client
 matplotlib
 plotly
-# web
-streamlit
+
