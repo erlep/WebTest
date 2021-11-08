@@ -1,4 +1,4 @@
-# Benzín Brno -bbLST.py - LIST tj. seznam benzinek
+# Benzín Brno - bbLST.py - LIST tj. seznam benzinek
 # v2 - pokus
 
 from bbCFG import *

@@ -2,6 +2,7 @@
 # Ulozi ceny benzinek do Xls souboru
 from bbCFG import *
 from bbLST import *
+from bbLog import *
 from bbTankONO import *
 from bbMapy import *
 from bbGlobus import *

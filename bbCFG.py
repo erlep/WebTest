@@ -4,26 +4,26 @@ import inspect
 
 # Globalni promenne
 bbNmBB = 'BenzinBrno '
-bbNmVR = 0.083
+bbNmVR = 0.09
 bbNmVE = 'v' + str(bbNmVR)
 bbNmDE = ' - Natural 95 prices in Brno - Python Version'
 bbName = 'BenzinBrno v0.00 - Natural 95 prices in Brno - Python Version'
 bbName = bbNmBB + bbNmVE + bbNmDE
 bbNadpis = 'Ceny Benzínu v Brně:'
 bbTtest = r'C:\peg\z1drv\OneDrive\aaEgp_P2E2\1Drv\qqq_Prj\ppBB\bbCFG.py'
-bbRender = 'requests_html'  # selenium | playwright | requests_html
 bbXlsFlNm = 'bbCeny.xlsx'  # nazev xls souboru
 bbXlsShNm = bbNmBB.strip()  # strip = trim
 bbNoUrl = '--url--'
-
 # Configurace App
 bbProduct = True  # True / False  - ostra / ladici verze
 bbNoBBprn = True  # True / False  - ladeni tj. vypisovani dodatecnych informaci  ano / ne
 bbCenaNoF = True  # True / False  - NEformatovat cenu real na string: # 34.4  => 34,40 Kč
+# Renderer
+bbRender = 'playwright'  # selenium | playwright | requests_html
 # import time - strftime - https://bit.ly/3Edt2np
 bbDateMsk = "%Y/%m/%d %H:%M"  # format casu - time.strftime("%Y/%m/%e %H:%M:%S")
-bbDateDMY = "%d.%m.%Y %H:%M"  # format casu - time.strftime("%Y/%m/%e %H:%M:%S")
-
+bbDateDMY = "%d.%m.%Y %H:%M"  # format casu
+bbDateLog = "%d.%m.%Y--%H:%M"  # format casu
 # Formatovani Ceny (float) - Cena = '{:.2f}'.format(item)
 bbCenaMsk = '{:.2f}'  # format na 2 desetinna mista
 
