@@ -1,6 +1,5 @@
 # Benzín Brno - bbCFG.py - config file
 #  BenzinBrno v0.00 - Natural 95 prices in Brno - Python Version
-import inspect
 
 # Globalni promenne
 bbNmBB = 'BenzinBrno '
@@ -32,14 +31,15 @@ bbCenaMsk = '{:.2f}'  # format na 2 desetinna mista
 # bbPrintDebug('Loc:', 'FceName','Var', Var )
 def bbprint(s1='', s2='', s3='', s4='', s5='', s6='', s7='', s8='', s9='', s10='', s11='', s12='', s13='', s14='',):
   if not(bbNoBBprn):
+    import inspect
     # akt fce
     # print(inspect.stack()[0][0].f_code.co_name)
     # predchozi funkce - stack[1]
     s0 = inspect.stack()[1][0].f_code.co_name + '/' + inspect.stack()[2][0].f_code.co_name + ': '
-    print(s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12)
+    print(s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14)
 
 # main
-def main():
+def bbCFG_main():
   print("bbTtest:    ", bbTtest)
   print("bbRender:    ", bbRender)
   print("bbName:      ", bbName)
@@ -49,4 +49,4 @@ def main():
 
 # name__
 if __name__ == '__main__':
-  main()
+  bbCFG_main()

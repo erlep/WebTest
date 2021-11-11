@@ -4,7 +4,7 @@
 from bbCFG import *
 from bbCena import *
 # neVirtual zeber v - vbbTankONO bbTankONO
-from vbbTankONO import *
+from bbTankONO import *
 from vbbMapy import *
 from vbbGlobus import *
 from vbbMakro import *
@@ -36,7 +36,7 @@ bbBenzinky = [
 ]
 
 # main
-def main():
+def bbLST_main():
   print("bbTtest:    ", bbTtest)
   print("bbRender:   ", bbRender)
   bbFce = tF(tTankO(s))
@@ -48,4 +48,4 @@ def main():
 
 # name__
 if __name__ == '__main__':
-  main()
+  bbLST_main()

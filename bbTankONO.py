@@ -1,15 +1,20 @@
-# Benzín Brno - TankONO - Natural "95" - pumpa: 'ČS Brno-Hviezdoslavova' - http://www.tank-ono.cz/cz/index.php?page=cenik
-# v2 - pokus
-from bbCFG import *
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from unicodedata import normalize
+# Benzín Brno - TankONO - Natural "95" - pumpa: 'ČS Brno-Hviezdoslavova'
+# http://www.tank-ono.cz/cz/index.php?page=cenik
+
+# from bbCFG import bbprint
+# from bbCFG import bbProduct
+# import requests
+# # from bs4 import BeautifulSoup
+# import pandas as pd
+# import numpy as np
+# import matplotlib.pyplot as plt
+# from unicodedata import normalize
 
 # extract - stahne stranku
 def extract(url, Key):
+  import requests
+  import pandas as pd
+
   # requests - nacte stranku
   # url = r'http://www.tank-ono.cz/cz/index.php?page=cenik'
   headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36'}
@@ -44,6 +49,8 @@ def extract(url, Key):
 
 # test function
 def tTankO(url=''):
+  from bbCFG import bbprint
+  from bbCFG import bbProduct
   bbprint('tTankO:', 'url', url)
   if bbProduct:
     return TankO(url)

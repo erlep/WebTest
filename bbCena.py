@@ -39,7 +39,7 @@ def tF(val):
     return val
 
 # main
-def main():
+def bbCena_main():
   print("F(18.9551): ", F(18.9551))
   print("F(29.99):   ", F(29.99))
   print("F(29.9):    ", F(29.9))
@@ -49,4 +49,4 @@ def main():
 
 # name__
 if __name__ == '__main__':
-  main()
+  bbCena_main()
