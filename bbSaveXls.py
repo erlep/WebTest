@@ -24,8 +24,12 @@ def SaveXls(Dump=False):
   # print(dfXls)
 
   # Benzinky
+  # Now date
+  NowDate = ' - Staus On: ' + str(time.strftime(bbDateMsk))
   # Hlavicka tabulky - ['Název', 'Cena', 'Old Cena', 'Delta Cena', 'Old Datum', 'Url']
-  df = pd.DataFrame(columns=bbHLAVICKA)
+  Hlava = bbHLAVICKA[:]
+  Hlava[bbHlavaUrl] = Hlava[bbHlavaUrl] + NowDate
+  df = pd.DataFrame(columns=Hlava)
   # pole benzinek: Nazev, Fce, Url
   for i, n in enumerate(bbBenzinky):
     # Zjisti cenu
@@ -44,22 +48,31 @@ def SaveXls(Dump=False):
     if Cena != OldCena:
       # Zmena ceny
       OldDelt = F2f(Cena - OldCena)
-      OldDate = time.strftime(bbDateMsk)
-      zc = ' ' + str(float(OldDelt)) + ' Cena:' + str(float(Cena)) + ' Old:' + str(float(OldCena)) + ' ' + str(OldDate) + ' - zmena ceny '
-      #  Vypis zmenu kdyz neni dump
-      print(n[0], ':', Cena, zc) if not(Dump) else None
+      # pridani +-
+      if OldDelt > 0:
+        OldDelt = '+' + str(OldDelt)
+      else:
+        OldDelt = str(OldDelt)
       # import time - strftime - https://bit.ly/3Edt2np
+      OldDate = time.strftime(bbDateMsk)
+      zc = ' ' + str((OldDelt)) + ' Cena:' + str(float(Cena)) + ' Old:' + str(float(OldCena)) + ' ' + str(OldDate) + ' - zmena ceny '
+      #  Vypis zmenu kdyz neni dump
+      txt = n[0] + ':' + str(Cena) + zc
+      print(txt) if not(Dump) else None
+      # Log protokol zmen - append to file - https://bit.ly/3mXdyhz
+      with open(bbLogFlNm, "a") as LogF:
+        LogF.write(txt+'\n')
     else:
       OldCena = dfXls.iloc[i, bbHlavOldC]
 
     # DataSet
+    bbprint('#', i, ': Nazev:', n[0], ' Cena:', Cena, ' OldCena:', OldCena, ' OldDelt:', OldDelt, ' n[3]:', n[3])
     df.loc[i] = [n[0], Cena, OldCena, OldDelt, OldDate, n[3]]
     # Vypisuj?
     if Dump:
       # Zjisti cenu
       print(n[0], ':', Cena, zc)
   # Save Xls
-  # print('df', type(df))
   # df.style.set_precision(2).background_gradient().hide_index().to_excel('styled.xlsx', engine='openpyxl')
   df.to_excel(bbXlsFlNm, index=False, sheet_name=bbXlsShNm)
   return None

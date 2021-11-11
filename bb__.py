@@ -5,6 +5,7 @@
 # Tento file: bb__.py
 # Chk Log:    DoChk.Log
 # Notes:      Notes.Txt
+# vEnv - C:\aaC\vEnv\R-I.txt
 
 from bbCFG import *
 from bbLST import *

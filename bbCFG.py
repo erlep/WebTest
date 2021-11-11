@@ -4,15 +4,16 @@ import inspect
 
 # Globalni promenne
 bbNmBB = 'BenzinBrno '
-bbNmVR = 0.09
+bbNmVR = 0.10
 bbNmVE = 'v' + str(bbNmVR)
 bbNmDE = ' - Natural 95 prices in Brno - Python Version'
 bbName = 'BenzinBrno v0.00 - Natural 95 prices in Brno - Python Version'
 bbName = bbNmBB + bbNmVE + bbNmDE
 bbNadpis = 'Ceny Benzínu v Brně:'
 bbTtest = r'C:\peg\z1drv\OneDrive\aaEgp_P2E2\1Drv\qqq_Prj\ppBB\bbCFG.py'
+bbLogFlNm = 'bbCeny.Log'   # nazev protokolu zmen
 bbXlsFlNm = 'bbCeny.xlsx'  # nazev xls souboru
-bbXlsShNm = bbNmBB.strip()  # strip = trim
+bbXlsShNm = bbNmBB.strip()  # sheet name, strip = trim
 bbNoUrl = '--url--'
 # Configurace App
 bbProduct = True  # True / False  - ostra / ladici verze
@@ -29,7 +30,7 @@ bbCenaMsk = '{:.2f}'  # format na 2 desetinna mista
 
 # bbPrintDebug
 # bbPrintDebug('Loc:', 'FceName','Var', Var )
-def bbprint(s1='', s2='', s3='', s4='', s5='', s6='', s7='', s8='', s9='', s10='', s11='', s12='',):
+def bbprint(s1='', s2='', s3='', s4='', s5='', s6='', s7='', s8='', s9='', s10='', s11='', s12='', s13='', s14='',):
   if not(bbNoBBprn):
     # akt fce
     # print(inspect.stack()[0][0].f_code.co_name)

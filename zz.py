@@ -14,35 +14,23 @@ import time
 
 def SaveXls(Dump=False):
   """ Ulozi ceny benzinu do Xls
-
-  Args:
-      Dump: Vypisuj ceny
   """
-  # Benzinky
+# Benzinky
+  # Now date
+  NowDate = ' - Staus On: ' + str(time.strftime(bbDateMsk))
+  EmpDate = ''
   # Hlavicka tabulky - ['Název', 'Cena', 'Old Cena', 'Delta Cena', 'Old Datum', 'Url']
-  df = pd.read_excel(bbXlsFlNm, sheet_name=bbXlsShNm)
-  print(df)
-  # Pandas select specific cell
-  hNazev = bbHLAVICKA[0]  # 'Název'
-  hCena = bbHLAVICKA[1]  # 'Cena'
-  rGlobus = bbBenzinky[2][0]  # 'Globus                 '
+  Hlava = bbHLAVICKA[:]
+  Hlava[bbHlavaUrl] = Hlava[bbHlavaUrl] + NowDate
+  print('NowDate', NowDate, type(NowDate))
+  print('EmpDate', NowDate, type(NowDate))
+  print('bbHLAVICKA', bbHLAVICKA, type(bbHLAVICKA))
+  print('Hlava', Hlava, type(Hlava))
 
-  # Sloupec  Cena
-  cGlobus = df[[hCena]]
-
-  # Sloupce Nazev a Cena
-  cGlobus = df[[hNazev, hCena]]
-
-  # Radek Globus
-  cGlobus = df[df[hNazev] == rGlobus]
-
-  # Cena Globus
-  cGlobus = df.loc[df[hNazev] == rGlobus, hCena]
-
-  # Cena Globus - pomoci indexu
-  cGlobus = df.iloc[2, 1]
-
-  print('>>', rGlobus, '<<', cGlobus)
+  a = [1, 2, 3]
+  b = [4]
+  a = a + b
+  print(a)
 
   return None
 

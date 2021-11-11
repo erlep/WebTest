@@ -1,4 +1,4 @@
-# WebTest - pokus pro web v21
+# WebTest - pokus pro web v22
 
 zkusim na AWS - <https://share.streamlit.io/erlep/webtest/main/bbWeb.py>
 

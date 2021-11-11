@@ -1,5 +1,6 @@
 @echo off
   : Benzín Brno - Kontrola cen na benzinkach
+  : python3 bbDoChk.py
 
   Echo.
   Echo %0

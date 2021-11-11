@@ -19,6 +19,7 @@ bbHlavCena = 1  # pozice 'Cena' v bbHlavicka
 bbHlavOldC = 2  # pozice 'Old Cena' v bbHlavicka
 bbHlavDlta = 3  # pozice 'Delta Cena' v bbHlavicka
 bbHlavDate = 4  # pozice 'Old Datum' v bbHlavicka
+bbHlavaUrl = 5  # pozice 'Url' v bbHlavicka
 
 # Konfigurace benzinek - Nazev, Fce, Url
 bbBenzinky = [
