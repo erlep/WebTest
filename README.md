@@ -1,4 +1,4 @@
-# WebTest - pokus pro web v22
+# WebTest - pokus pro web dle bbNmVR = 0.11
 
 zkusim na AWS - <https://share.streamlit.io/erlep/webtest/main/bbWeb.py>
 

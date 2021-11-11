@@ -4,7 +4,7 @@ import inspect
 
 # Globalni promenne
 bbNmBB = 'BenzinBrno '
-bbNmVR = 0.10
+bbNmVR = 0.11
 bbNmVE = 'v' + str(bbNmVR)
 bbNmDE = ' - Natural 95 prices in Brno - Python Version'
 bbName = 'BenzinBrno v0.00 - Natural 95 prices in Brno - Python Version'

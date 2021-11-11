@@ -2,12 +2,13 @@
 # v2 - pokus
 
 from bbCFG import *
-from bbTankONO import *
-from bbMapy import *
-from bbGlobus import *
-from bbMakro import *
-from bbmBenzin import *
 from bbCena import *
+# neVirtual zeber v - vbbTankONO bbTankONO
+from vbbTankONO import *
+from vbbMapy import *
+from vbbGlobus import *
+from vbbMakro import *
+from vbbmBenzin import *
 
 # s - budouci promenna url
 s = bbNoUrl  # '--url--'
