@@ -1,8 +1,12 @@
-# WebTest - pokus pro web dle bbNmVR = 0.11
-
-zkusim na AWS - <https://share.streamlit.io/erlep/webtest/main/bbWeb.py>
+# WebTest - pokus pro web dle bbNmVR = 0.11b
 
 BB StreamLit - <https://share.streamlit.io/erlep/webtest/main/bbWeb.py>
+
+---
+
+StreamLit - <https://share.streamlit.io>
+
+zkusim na AWS - <https://share.streamlit.io/erlep/webtest/main/bbWeb.py> nejde
 
 + requirements.txt
 
