@@ -20,7 +20,7 @@ def SaveXls(Dump=False):
   Args:
       Dump: Vypisuj ceny
   """
-  from bbCFG import bbprint, bbXlsFlNm, bbXlsShNm, bbDateMsk, bbLogFlNm
+  from bbCFG import bbprint, bbXlsFlNm, bbXlsShNm, bbDateMsk, bbLogFlNm, bbDateDMY
   from bbLST import bbHLAVICKA, bbBenzinky, bbHlavCena, bbHlavOldC, bbHlavDlta, bbHlavDate, bbHlavaUrl, bbNoUrl, s
   from bbCena import F2f, tF
   from bbTankONO import tTankO
@@ -38,7 +38,7 @@ def SaveXls(Dump=False):
 
   # Benzinky
   # Now date
-  NowDate = 'Last status check on: ' + str(time.strftime(bbDateMsk))
+  NowDate = 'Last status check on: ' + str(time.strftime(bbDateDMY))
   # Hlavicka tabulky - ['Název', 'Cena', 'Old Cena', 'Delta Cena', 'Old Datum', 'Url']
   Hlava = bbHLAVICKA[:]
   Hlava[bbHlavaUrl] = NowDate

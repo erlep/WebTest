@@ -15,7 +15,7 @@ openpyxl
 # ipykernel
 
 # web
-# streamlit
+streamlit
 
 # vEnv
 Playwright
@@ -24,4 +24,8 @@ Playwright
 # scrapingant_client
 # matplotlib
 # plotly
+
+# Nove
+requests
+
 

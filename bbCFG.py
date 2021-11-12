@@ -3,7 +3,7 @@
 
 # Globalni promenne
 bbNmBB = 'BenzinBrno '
-bbNmVR = 0.16
+bbNmVR = 0.19
 bbNmVE = 'v' + str(bbNmVR)
 bbNmDE = ' - Natural 95 prices in Brno - Python Version'
 bbName = 'BenzinBrno v0.00 - Natural 95 prices in Brno - Python Version'
@@ -21,7 +21,7 @@ bbCenaNoF = True  # True / False  - NEformatovat cenu real na string: # 34.4  =>
 # Renderer
 bbRender = 'playwright'  # selenium | playwright | requests_html
 # import time - strftime - https://bit.ly/3Edt2np
-bbDateMsk = "%Y/%m/%d %H:%M"  # format casu - time.strftime("%Y/%m/%e %H:%M:%S")
+bbDateMsk = "%Y-%m-%d %H:%M:%S"  # format casu - time.strftime("%Y/%m/%e %H:%M:%S") "%Y/%m/%d %H:%M"
 bbDateDMY = "%d.%m.%Y %H:%M"  # format casu
 bbDateLog = "%d.%m.%Y--%H:%M"  # format casu
 # Formatovani Ceny (float) - Cena = '{:.2f}'.format(item)
