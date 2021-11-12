@@ -3,7 +3,7 @@
 
 # Globalni promenne
 bbNmBB = 'BenzinBrno '
-bbNmVR = 0.15
+bbNmVR = 0.16
 bbNmVE = 'v' + str(bbNmVR)
 bbNmDE = ' - Natural 95 prices in Brno - Python Version'
 bbName = 'BenzinBrno v0.00 - Natural 95 prices in Brno - Python Version'

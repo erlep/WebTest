@@ -5,23 +5,23 @@
 # verze BB
 
 # Zaklad
-pylint
-selenium
+# pylint
+# selenium
 bs4
-autopep8
+# autopep8
 pandas
 lxml  # potrebuje Python 3.9 a pandas
 openpyxl
-ipykernel
+# ipykernel
 
 # web
-streamlit
+# streamlit
 
 # vEnv
 Playwright
-Pyppeteer
-requests_html
-scrapingant_client
-matplotlib
-plotly
+# Pyppeteer
+# requests_html
+# scrapingant_client
+# matplotlib
+# plotly
 
