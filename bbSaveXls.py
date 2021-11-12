@@ -1,17 +1,18 @@
-# Benzín Brno - bbSaveXls.py - vypise ceny jednotlivych benzinek
+# Benzín Brno - bbSaveXls.py - vypise ceny jednotlivych benzinek - bbSaveXls.py
 # Ulozi ceny benzinek do Xls souboru
-from bbCFG import *
-from bbLST import *
-from bbLog import *
-from bbTankONO import *
-from bbMapy import *
-from bbGlobus import *
-from bbMakro import *
-from bbmBenzin import *
-from bbCena import *
 
-import pandas as pd
-import time
+# from bbCFG import *
+# from bbLST import *
+# from bbLog import *
+# from bbTankONO import *
+# from bbMapy import *
+# from bbGlobus import *
+# from bbMakro import *
+# from bbmBenzin import *
+# from bbCena import *
+
+# import pandas as pd
+# import time
 
 def SaveXls(Dump=False):
   """ Ulozi ceny benzinu do Xls
@@ -19,20 +20,32 @@ def SaveXls(Dump=False):
   Args:
       Dump: Vypisuj ceny
   """
+  from bbCFG import bbprint, bbXlsFlNm, bbXlsShNm, bbDateMsk, bbLogFlNm
+  from bbLST import bbHLAVICKA, bbBenzinky, bbHlavCena, bbHlavOldC, bbHlavDlta, bbHlavDate, bbHlavaUrl, bbNoUrl, s
+  from bbCena import F2f, tF
+  from bbTankONO import tTankO
+  from bbMapy import tMappy
+  from bbGlobus import tGlobu
+  from bbMakro import tMakro
+  from bbmBenzin import tmBenz
+
+  import pandas as pd
+  import time
+
   # Xls file
   dfXls = pd.read_excel(bbXlsFlNm, sheet_name=bbXlsShNm)
   # print(dfXls)
 
   # Benzinky
   # Now date
-  NowDate = ' - Staus On: ' + str(time.strftime(bbDateMsk))
+  NowDate = 'Last status check on: ' + str(time.strftime(bbDateMsk))
   # Hlavicka tabulky - ['Název', 'Cena', 'Old Cena', 'Delta Cena', 'Old Datum', 'Url']
   Hlava = bbHLAVICKA[:]
-  Hlava[bbHlavaUrl] = Hlava[bbHlavaUrl] + NowDate
+  Hlava[bbHlavaUrl] = NowDate
   df = pd.DataFrame(columns=Hlava)
   # pole benzinek: Nazev, Fce, Url
   for i, n in enumerate(bbBenzinky):
-    # Zjisti cenu
+    # Zjisti cenu - pomoci eval, s - je url
     s = n[3]  # Url
     Cena = eval(n[1])  # nazev promenne v promenne
     bbprint('  su tu n[1]:', n[1], 'Cena', Cena)
@@ -55,9 +68,9 @@ def SaveXls(Dump=False):
         OldDelt = str(OldDelt)
       # import time - strftime - https://bit.ly/3Edt2np
       OldDate = time.strftime(bbDateMsk)
-      zc = ' ' + str((OldDelt)) + ' Cena:' + str(float(Cena)) + ' Old:' + str(float(OldCena)) + ' ' + str(OldDate) + ' - zmena ceny '
+      zc = ' ' + str((OldDelt)) + ' Cena: ' + str(float(Cena)) + ' Old: ' + str(float(OldCena)) + ' ' + str(OldDate) + ' - zmena ceny '
       #  Vypis zmenu kdyz neni dump
-      txt = n[0] + ':' + str(Cena) + zc
+      txt = n[0] + ': ' + str(Cena) + zc
       print(txt) if not(Dump) else None
       # Log protokol zmen - append to file - https://bit.ly/3mXdyhz
       with open(bbLogFlNm, "a") as LogF:
@@ -78,11 +91,11 @@ def SaveXls(Dump=False):
   return None
 
 # main
-def main():
+def bbSaveXls_main():
   print()
   print("SaveXls():    ", SaveXls())
   print('OkDone.')
 
 # __name__
 if __name__ == '__main__':
-  main()
+  bbSaveXls_main()

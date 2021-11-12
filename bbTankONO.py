@@ -1,4 +1,4 @@
-# Benzín Brno - TankONO - Natural "95" - pumpa: 'ČS Brno-Hviezdoslavova'
+# Benzín Brno - TankONO - Natural "95" - pumpa: 'ČS Brno-Hviezdoslavova' - bbTankONO.py
 # http://www.tank-ono.cz/cz/index.php?page=cenik
 
 # from bbCFG import bbprint
@@ -49,8 +49,7 @@ def extract(url, Key):
 
 # test function
 def tTankO(url=''):
-  from bbCFG import bbprint
-  from bbCFG import bbProduct
+  from bbCFG import bbprint, bbProduct
   bbprint('tTankO:', 'url', url)
   if bbProduct:
     return TankO(url)
@@ -68,10 +67,10 @@ def TankO(url=''):
   return Cena
 
 # main
-def main():
+def bbTankONO_main():
   print('def TankO(): ', tTankO('zz'))
   print('OkDone.')
 
 # name__
 if __name__ == '__main__':
-  main()
+  bbTankONO_main()

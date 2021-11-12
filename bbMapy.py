@@ -1,13 +1,16 @@
-# Benzín Brno - Mapy.cz - https://bit.ly/3izRnLE
+# Benzín Brno - Mapy.cz - https://bit.ly/3izRnLE - bbMapy.py
 # Pro JavaScript pouziva: selenium <-> playwright
-from bbCFG import *
-from bbGetPage import GetPage
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from bs4 import BeautifulSoup
+# bbMapy.py
+# from bbCFG import *
+# from bbGetPage import GetPage
+# from selenium import webdriver
+# from selenium.webdriver.chrome.options import Options
+# from bs4 import BeautifulSoup
 
 # extract - stahne stranku
-def extract(url, Key):
+def extract(url=''):
+  from bbGetPage import GetPage
+  from bs4 import BeautifulSoup
   page_source = GetPage(url)
   # Parse processed webpage with BeautifulSoup
   soup = BeautifulSoup(page_source, features="lxml")
@@ -27,6 +30,7 @@ def extract(url, Key):
 
 # test function
 def tMappy(url=''):
+  from bbCFG import bbprint, bbProduct, bbNoUrl
   bbprint('tMappy:', 'url', url)
   if bbProduct and (url != bbNoUrl):
     return Mappy(url)
@@ -37,17 +41,17 @@ def tMappy(url=''):
 
 # globus - vrati cenu za natual - https://www.globus.cz/brno/cerpaci-stanice-a-myci-linka.html
 def Mappy(url):
-  Key = 'Benzín'
-  Cena = extract(url, Key)
+  # Key = 'Benzín'
+  Cena = extract(url)
   # print('Cena paliva -', Key, '- je:', Cena)
   return Cena
 
 # main
-def main():
+def bbMapy_main():
   url = r'https://bit.ly/3izRnLE'
-  print("def Mapy(r'https://bit.ly/3izRnLE'): ", Mapy(url))
+  print("def Mapy(r'https://bit.ly/3izRnLE'): ", Mappy(url))
   print('OkDone.')
 
 # name__
 if __name__ == '__main__':
-  main()
+  bbMapy_main()

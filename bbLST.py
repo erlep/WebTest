@@ -1,14 +1,13 @@
 # Benzín Brno - bbLST.py - LIST tj. seznam benzinek
 # v2 - pokus
 
-from bbCFG import *
-from bbCena import *
-# neVirtual zeber v - vbbTankONO bbTankONO
-from bbTankONO import *
-from vbbMapy import *
-from vbbGlobus import *
-from vbbMakro import *
-from vbbmBenzin import *
+from bbCFG import bbNoUrl
+from bbCena import tF
+from bbTankONO import tTankO
+from bbMapy import tMappy
+from bbGlobus import tGlobu
+from bbMakro import tMakro
+from bbmBenzin import tmBenz
 
 # s - budouci promenna url
 s = bbNoUrl  # '--url--'
@@ -37,6 +36,7 @@ bbBenzinky = [
 
 # main
 def bbLST_main():
+  from bbCFG import bbTtest, bbRender
   print("bbTtest:    ", bbTtest)
   print("bbRender:   ", bbRender)
   bbFce = tF(tTankO(s))

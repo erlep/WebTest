@@ -1,5 +1,5 @@
 # Benzín Brno - bbCena.py - pro vstupni real naformatuje cenu paliva: 34.4  => 34,40 Kč
-from bbCFG import *
+# from bbCFG import *
 
 def F(val):
   """ Formatovani Ceny z real na string: # 34.4  => 34,40 Kč
@@ -8,6 +8,7 @@ def F(val):
   Returns:
       Naformatovana cena
   """
+  from bbCFG import bbprint, bbCenaNoF
   bbprint("val:", val, '|| type:', type(val))
   Cena = F2f(val)
   # Formatovat?
@@ -22,6 +23,7 @@ def F(val):
 
 # Formatuje real na 2 def mista, vraci real
 def F2f(val):
+  from bbCFG import bbprint, bbCenaMsk
   bbprint("val:", val, '|| type:', type(val))
   # => float
   item = float(val)
@@ -32,6 +34,7 @@ def F2f(val):
 
 # testovaci funkce
 def tF(val):
+  from bbCFG import bbprint, bbProduct
   bbprint('tF:', 'val', val)
   if bbProduct:
     return F(val)

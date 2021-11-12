@@ -1,4 +1,4 @@
-# Benzín Brno - hlavni soubor
+# Benzín Brno - bb__.py - hlavni soubor
 # Pro JavaScript pouziva: selenium <-> playwright
 
 # Soubory
@@ -7,14 +7,14 @@
 # Notes:      Notes.Txt
 # vEnv - C:\aaC\vEnv\R-I.txt
 
-from bbCFG import *
-from bbLST import *
-from bbLog import *
-from bbSaveXls import SaveXls
-import bbDoChk
+# from bbCFG import bbNmBB
+# from bbLST import *
+# from bbLog import *
+# from bbSaveXls import SaveXls
+from bbDoChk import DoChk
 
 # Check
-bbDoChk
+DoChk()
 
 # # Benzinky zjisti ceny a uloz do Xls
 # SaveXls(True)

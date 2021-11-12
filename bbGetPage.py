@@ -1,3 +1,5 @@
+# Benzín Brno - bbGetPage.py - stahne stranku
+
 # Scrape a Dynamic Website with Python - https://bit.ly/3Dm2GPs
 # BeautifulSoup, Selenium, Pyppeteer, Playwright, and Web Scraping API + requests_html
 # Hybrid verze muze pouzivat selenium | playwright | requests_html
@@ -10,19 +12,21 @@
 
 # playwright vs selenium - https://bit.ly/3aA7UuI
 # Puppeteer, Selenium, Playwright, Cypress – how to choose? - https://bit.ly/3aCUMVJ
-from bbCFG import *
-# from bbLST import *  # nemuze tady byt jinak je cyklicky odkaz
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from bs4 import BeautifulSoup
-import os
-import asyncio
-from playwright.async_api import async_playwright
-from requests.sessions import session
-from requests_html import AsyncHTMLSession
+
+# from bbCFG import *
+# # from bbLST import *  # nemuze tady byt jinak je cyklicky odkaz
+# from selenium import webdriver
+# from selenium.webdriver.chrome.options import Options
+# from bs4 import BeautifulSoup
+# import os
+# import asyncio
+# from playwright.async_api import async_playwright
+# from requests.sessions import session
+# from requests_html import AsyncHTMLSession
 
 # selenium
 def page_content_selenium(url):
+  from selenium import webdriver
   options = webdriver.ChromeOptions()
   options.add_argument('--ignore-ssl-errors=yes')
   options.add_argument('--ignore-certificate-errors')
@@ -35,6 +39,9 @@ def page_content_selenium(url):
 # playwright
 def page_content_playwright(url):
   # Use async version of Playwright
+  from playwright.async_api import async_playwright
+  import asyncio
+
   async def page_get():
     async with async_playwright() as p:
       browser = await p.chromium.launch()
@@ -49,6 +56,7 @@ def page_content_playwright(url):
 
 # requests_html
 def page_content_requests_html(url):
+  from requests_html import AsyncHTMLSession
   asession = AsyncHTMLSession()
   # JavaScript Support async
 
@@ -63,6 +71,7 @@ def page_content_requests_html(url):
 
 # GetPage
 def GetPage(url):
+  from bbCFG import bbprint, bbRender
   bbprint('GetPage:', 'url', url)
   # selenium | playwright | requests_html
   # bbRender = 'requests_html'

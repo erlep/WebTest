@@ -1,16 +1,20 @@
-# Benzín Brno - Makro - "Natural 95" - https://www.makro.cz/prodejny/brno
-from bbCFG import *
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from unicodedata import normalize
+# Benzín Brno - Makro - "Natural 95" - bbMakro.py
+# https://www.makro.cz/prodejny/brno
+
+# from bbCFG import *
+# import requests
+# from bs4 import BeautifulSoup
+# import pandas as pd
+# import numpy as np
+# import matplotlib.pyplot as plt
+# from unicodedata import normalize
 
 # extract - stahne stranku
 def extract(url, Key):
   # requests - nacte stranku
   # url = r'http://www.tank-ono.cz/cz/index.php?page=cenik'
+  import requests
+  import pandas as pd
   headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36'}
   r = requests.get(url, headers)
 
@@ -40,6 +44,7 @@ def extract(url, Key):
 
 # test function
 def tMakro(url=''):
+  from bbCFG import bbprint, bbProduct
   bbprint('tMakro:', 'url', url)
   if bbProduct:
     return Makro(url)
@@ -55,10 +60,10 @@ def Makro(url=''):
   return Cena
 
 # main
-def main():
+def bbMakro_main():
   print('def Makro(): ', Makro())
   print('OkDone.')
 
 # name__
 if __name__ == '__main__':
-  main()
+  bbMakro_main()

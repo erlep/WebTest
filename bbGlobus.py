@@ -1,15 +1,21 @@
-# Benzín Brno - Globus - Natural- https://www.globus.cz/brno/cerpaci-stanice-a-myci-linka.html
-from bbCFG import *
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from unicodedata import normalize
-import sys
+# Benzín Brno - Globus - Natural - bbGlobus.py
+# https://www.globus.cz/brno/cerpaci-stanice-a-myci-linka.html
+
+# from bbCFG import *
+# import requests
+# from bs4 import BeautifulSoup
+# import pandas as pd
+# import numpy as np
+# import matplotlib.pyplot as plt
+# from unicodedata import normalize
+# import sys
 
 # extract - stahne stranku
 def extract(url, Key):
+  from bbCFG import bbCenaMsk
+  import requests
+  import pandas as pd
+  import sys
   headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36'}
   r = requests.get(url, headers)
   # r.content
@@ -35,9 +41,10 @@ def extract(url, Key):
   # LookUp - nalezeni hodnoty Key - https://bit.ly/3DuT59p
   Radek = df.loc[df['Name'] == Key]
   # How to get a value from a Pandas DataFrame and not the index and object type - https://bit.ly/3BhmuDc
+  # Catching all exceptions without pylint error - https://bit.ly/3kvu86m
   try:
     Cena = Radek['Cena'].values[0]
-  except:  # catch *all* exceptions
+  except:  # catch *all* exceptions  - pylint: disable=bare-except
     e = sys.exc_info()[0]
     print("Error: ", e)
     Cena = 0
@@ -47,6 +54,7 @@ def extract(url, Key):
 
 # test function
 def tGlobu(url=''):
+  from bbCFG import bbprint, bbProduct
   bbprint('tGlobu:', 'url', url)
   if bbProduct:
     return Globu(url)

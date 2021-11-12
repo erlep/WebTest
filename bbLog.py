@@ -1,18 +1,26 @@
 # Benzín Brno - bbLog.py - logovani data a casu
 
-from bbCFG import *
+# from bbCFG import *
 
-import time
-import inspect
-import socket
-import getpass
-import sys
+# import time
+# import inspect
+# import socket
+# import getpass
+# import sys
 
 # Log object
 class oLog:
-  ''' class Person '''
+  ''' class oLog '''
   def __init__(self, znak='x'):
     ''' konstruktor '''
+    from bbCFG import bbDateLog
+
+    import time
+    import inspect
+    import socket
+    import getpass
+    import sys
+
     self.zz = '-' * 2  # '--'
     self.z3 = '-' * 3  # '---'
     self.tilda = '~' * 2  # '~~'

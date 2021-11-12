@@ -1,17 +1,22 @@
-# Benzín Brno - mBenzin.cz - https://www.mbenzin.cz/Nejlevnejsi-benzin/brno
+# Benzín Brno - mBenzin.cz - bbmBenzin.py
+# https://www.mbenzin.cz/Nejlevnejsi-benzin/brno
 # Benzina Albert Modřice - https://bit.ly/3ltfpd1
-from bbCFG import *
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from unicodedata import normalize
+
+# from bbCFG import *
+# import requests
+# from bs4 import BeautifulSoup
+# import pandas as pd
+# import numpy as np
+# import matplotlib.pyplot as plt
+# from unicodedata import normalize
 
 # extract - stahne stranku
 def extract(url, Key):
   # requests - nacte stranku
   # url = r'https://bit.ly/3ltfpd1'
+  import requests
+  from bs4 import BeautifulSoup
+  # Hlavicka
   headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36'}
   r = requests.get(url, headers)
   # r.content
@@ -23,7 +28,7 @@ def extract(url, Key):
   # span + id
   try:
     item = soup.find('span', id=Key).text.strip()
-  except:
+  except:  # catch *all* exceptions  - pylint: disable=bare-except
     item = ''
   # '35,90'  => 35.90
   item = item.replace(",", ".")
@@ -37,6 +42,7 @@ def extract(url, Key):
 
 # test function
 def tmBenz(url=''):
+  from bbCFG import bbprint, bbProduct, bbNoUrl, bbNmVR
   bbprint('tmBenz:', 'url', url)
   if bbProduct and (url != bbNoUrl):
     return mBenz(url)
@@ -45,17 +51,18 @@ def tmBenz(url=''):
 
 # globus - vrati cenu za natual - https://www.globus.cz/brno/cerpaci-stanice-a-myci-linka.html
 def mBenz(url):
+  from bbCFG import bbprint
   Key = 'ContentPlaceHolder1_lN95Cost'
   Cena = extract(url, Key)
   bbprint('Cena paliva -', Key, '- je:', Cena, 'type', type(Cena))
   return Cena
 
 # main
-def main():
+def bbmBenzin_main():
   url = r'https://bit.ly/3ltfpd1'
   print("mBenzin Benzina Albert Modřice - https://bit.ly/3ltfpd1:", mBenz(url))
   print('OkDone.')
 
 # name__
 if __name__ == '__main__':
-  main()
+  bbmBenzin_main()
