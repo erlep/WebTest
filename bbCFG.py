@@ -3,8 +3,9 @@
 
 # Globalni promenne
 bbNmBB = 'BenzinBrno '
-bbNmVR = 0.19
-bbNmVE = 'v' + str(bbNmVR)
+bbNmVR = 0.21
+# bbNmVE = 'v' + str(bbNmVR).format()
+bbNmVE = 'v' + '{:.2f}'.format(bbNmVR)
 bbNmDE = ' - Natural 95 prices in Brno - Python Version'
 bbName = 'BenzinBrno v0.00 - Natural 95 prices in Brno - Python Version'
 bbName = bbNmBB + bbNmVE + bbNmDE
@@ -45,6 +46,7 @@ def bbCFG_main():
   print("bbName:      ", bbName)
   print("bbNmNM:      ", bbXlsShNm)
   bbprint(' bbPrintDebug Test', 'je OK')
+  print("bbNmVE:      ", bbNmVE)
   print('OkDone.')
 
 # name__

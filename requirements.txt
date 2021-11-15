@@ -16,6 +16,8 @@ openpyxl
 
 # web
 streamlit
+plotly
+matplotlib
 
 # vEnv
 Playwright

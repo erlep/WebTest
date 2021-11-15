@@ -60,7 +60,8 @@ bar_chart = px.bar(df,
                    x=bbHLAVICKA[bbHlavCena],
                    y=bbHLAVICKA[bbHlavNazv],
                    text=bbHLAVICKA[bbHlavCena],
-                   title=Prices + bbNmBB + bbNmVE+' '+LastChech,
+                   #  title=Prices + bbNmBB + bbNmVE+' '+LastChech,
+                   title=Prices,
                    color=bbHLAVICKA[bbHlavCena],
                    category_orders={bbHLAVICKA[bbHlavNazv]: ((list(zip(*bbBenzinky)))[0])})
 st.plotly_chart(bar_chart)
