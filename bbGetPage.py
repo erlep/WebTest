@@ -71,8 +71,8 @@ def page_content_requests_html(url):
 
 # GetPage
 def GetPage(url):
-  from bbCFG import bbprint, bbRender
-  bbprint('GetPage:', 'url', url)
+  from bbCFG import brint, bbRender
+  brint('GetPage:', 'url', url)
   # selenium | playwright | requests_html
   # bbRender = 'requests_html'
   # print('bbRender:', bbRender)

@@ -9,7 +9,7 @@ def bbTest():
 
 # ---06.11.2021--06:16--PC5406257--proj_sw_backup--T_TmChk-2.bat---{~~
 def bbTest2():
-  bbprint("bbprint('','su tu')", ' - jako parametr', 'su tu')
+  brint("bbprint('','su tu')", ' - jako parametr', 'su tu')
   print('su tu')
 
 # main

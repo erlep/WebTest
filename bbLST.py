@@ -24,14 +24,15 @@ bbHlavaUrl = 5  # pozice 'Url' v bbHlavicka
 # Konfigurace benzinek - Nazev, Fce, Url
 bbBenzinky = [
     ['TankONO                ', 'tF(tTankO(s))', tF(tTankO(s)), r'http://www.tank-ono.cz/cz/index.php?page=cenik'],
-    ['Tesco - Mapy           ', 'tF(tMappy(s))', tF(tMappy(s)), r'https://bit.ly/3izRnLE'],
+    ['Tesco                  ', 'tF(tMappy(s))', tF(tMappy(s)), r'https://bit.ly/3izRnLE'],
     ['Globus                 ', 'tF(tGlobu(s))', tF(tGlobu(s)), r'https://www.globus.cz/brno/cerpaci-stanice-a-myci-linka.html'],
     ['Makro                  ', 'tF(tMakro(s))', tF(tMakro(s)), r'https://www.makro.cz/prodejny/brno'],
-    ['Shell Olomoucká - Mapy ', 'tF(tMappy(s))', tF(tMappy(s)), r'https://mapy.cz/s/megolelafe'],
-    ['MOL Olomoucká - Mapy   ', 'tF(tMappy(s))', tF(tMappy(s)), r'https://mapy.cz/s/kepegubeve'],
+    ['Shell Olomoucká        ', 'tF(tMappy(s))', tF(tMappy(s)), r'https://mapy.cz/s/megolelafe'],
+    # ['Shell Olomoucká        ', 'tF(tmBenz(s))', tF(tmBenz(s)), r'https://bit.ly/32Q9KHr'],
+    ['MOL Olomoucká          ', 'tF(tMappy(s))', tF(tMappy(s)), r'https://mapy.cz/s/kepegubeve'],
     ['Benzina Albert Modřice ', 'tF(tmBenz(s))', tF(tmBenz(s)), r'https://bit.ly/3ltfpd1'],
-    ['OMV IKEA - Mapy        ', 'tF(tMappy(s))', tF(tMappy(s)), r'https://mapy.cz/s/jatejehoda'],
-    ['EuroOil Opuštěná-Mapy  ', 'tF(tMappy(s))', tF(tMappy(s)), r'https://mapy.cz/s/cutobofugo'],
+    ['OMV IKEA               ', 'tF(tMappy(s))', tF(tMappy(s)), r'https://mapy.cz/s/jatejehoda'],
+    ['EuroOil Opuštěná       ', 'tF(tMappy(s))', tF(tMappy(s)), r'https://mapy.cz/s/cutobofugo'],
 ]
 
 # main

@@ -42,8 +42,8 @@ def extract(url, Key):
 
 # test function
 def tmBenz(url=''):
-  from bbCFG import bbprint, bbProduct, bbNoUrl, bbNmVR
-  bbprint('tmBenz:', 'url', url)
+  from bbCFG import brint, bbProduct, bbNoUrl, bbNmVR
+  brint('tmBenz:', 'url', url)
   if bbProduct and (url != bbNoUrl):
     return mBenz(url)
   else:
@@ -51,10 +51,10 @@ def tmBenz(url=''):
 
 # globus - vrati cenu za natual - https://www.globus.cz/brno/cerpaci-stanice-a-myci-linka.html
 def mBenz(url):
-  from bbCFG import bbprint
+  from bbCFG import brint
   Key = 'ContentPlaceHolder1_lN95Cost'
   Cena = extract(url, Key)
-  bbprint('Cena paliva -', Key, '- je:', Cena, 'type', type(Cena))
+  brint('Cena paliva -', Key, '- je:', Cena, 'type', type(Cena))
   return Cena
 
 # main

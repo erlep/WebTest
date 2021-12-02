@@ -44,8 +44,8 @@ def extract(url, Key):
 
 # test function
 def tMakro(url=''):
-  from bbCFG import bbprint, bbProduct
-  bbprint('tMakro:', 'url', url)
+  from bbCFG import brint, bbProduct
+  brint('tMakro:', 'url', url)
   if bbProduct:
     return Makro(url)
   else:

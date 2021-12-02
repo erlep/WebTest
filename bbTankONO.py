@@ -49,8 +49,8 @@ def extract(url, Key):
 
 # test function
 def tTankO(url=''):
-  from bbCFG import bbprint, bbProduct
-  bbprint('tTankO:', 'url', url)
+  from bbCFG import brint, bbProduct
+  brint('tTankO:', 'url', url)
   if bbProduct:
     return TankO(url)
   else:

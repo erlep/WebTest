@@ -6,7 +6,7 @@
 # from bbLST import *
 
 from bbCFG import bbName, bbNmBB, bbNmVE, bbNmDE, bbXlsFlNm, bbXlsShNm
-from bbLST import bbHLAVICKA, bbBenzinky, bbHlavCena, bbHlavNazv
+from bbLST import bbHLAVICKA, bbBenzinky, bbHlavCena, bbHlavNazv, bbHlavDate, bbHlavaUrl
 
 import pandas as pd
 import streamlit as st
@@ -24,7 +24,9 @@ streamlit run bbWeb.py
 '''
 
 # Excel file Tabulka
-df = pd.read_excel(bbXlsFlNm, sheet_name=bbXlsShNm)
+# df = pd.read_excel(bbXlsFlNm, sheet_name=bbXlsShNm)
+df = pd.read_excel(bbXlsFlNm, sheet_name=bbXlsShNm,
+                   converters={bbHLAVICKA[bbHlavDate]: pd.to_datetime, bbHLAVICKA[bbHlavaUrl]: str})
 # Hlavicka posledni bunka - 'Last status check on: '
 LastChech = str(list(df)[-1:][0])
 # Prices

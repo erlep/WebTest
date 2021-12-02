@@ -54,8 +54,8 @@ def extract(url, Key):
 
 # test function
 def tGlobu(url=''):
-  from bbCFG import bbprint, bbProduct
-  bbprint('tGlobu:', 'url', url)
+  from bbCFG import brint, bbProduct
+  brint('tGlobu:', 'url', url)
   if bbProduct:
     return Globu(url)
   else:

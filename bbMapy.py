@@ -11,10 +11,17 @@
 def extract(url=''):
   from bbGetPage import GetPage
   from bs4 import BeautifulSoup
+  import sys
   page_source = GetPage(url)
   # Parse processed webpage with BeautifulSoup
   soup = BeautifulSoup(page_source, features="lxml")
-  item = soup.find(itemprop="price").get_text()
+  # Zkusim ziskat cenu
+  try:
+    item = soup.find(itemprop="price").get_text()
+  except:  # catch *all* exceptions # pylint: disable=bare-except
+    e = sys.exc_info()[0]
+    print("Error v bbMapy.py: ", e)
+    item = '0'
   # 34,40 Kč => 34.40
   item = item.replace(" Kč", "")
   item = item.replace(",", ".")
@@ -30,8 +37,8 @@ def extract(url=''):
 
 # test function
 def tMappy(url=''):
-  from bbCFG import bbprint, bbProduct, bbNoUrl
-  bbprint('tMappy:', 'url', url)
+  from bbCFG import brint, bbProduct, bbNoUrl
+  brint('tMappy:', 'url', url)
   if bbProduct and (url != bbNoUrl):
     return Mappy(url)
   else:

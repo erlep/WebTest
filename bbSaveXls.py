@@ -20,7 +20,7 @@ def SaveXls(Dump=False):
   Args:
       Dump: Vypisuj ceny
   """
-  from bbCFG import bbprint, bbXlsFlNm, bbXlsShNm, bbDateMsk, bbLogFlNm, bbDateDMY
+  from bbCFG import brint, bbXlsFlNm, bbXlsShNm, bbDateMsk, bbLogFlNm, bbDateDMY
   from bbLST import bbHLAVICKA, bbBenzinky, bbHlavCena, bbHlavOldC, bbHlavDlta, bbHlavDate, bbHlavaUrl, bbNoUrl, s
   from bbCena import F2f, tF
   from bbTankONO import tTankO
@@ -33,7 +33,9 @@ def SaveXls(Dump=False):
   import time
 
   # Xls file
-  dfXls = pd.read_excel(bbXlsFlNm, sheet_name=bbXlsShNm)
+  # dfXls = pd.read_excel(bbXlsFlNm, sheet_name=bbXlsShNm)
+  # df1 = pd.read_excel(file, converters= {'COLUMN': pd.to_datetime}) - https://bit.ly/3nsSsrL
+  dfXls = pd.read_excel(bbXlsFlNm, sheet_name=bbXlsShNm, converters={bbHLAVICKA[bbHlavDate]: pd.to_datetime})
   # print(dfXls)
 
   # Benzinky
@@ -48,15 +50,19 @@ def SaveXls(Dump=False):
     # Zjisti cenu - pomoci eval, s - je url
     s = n[3]  # Url
     Cena = eval(n[1])  # nazev promenne v promenne
-    bbprint('  su tu n[1]:', n[1], 'Cena', Cena)
+    brint('  su tu n[1]:', n[1], 'Cena', Cena)
     # Nazev: cena
-    bbprint('#', i, ': Nazev:', n[0], ' Fce:', n[1], ' Cena:', Cena, ' 2:', n[2], ' Url:', n[3])
+    brint('#', i, ': Nazev:', n[0], ' Fce:', n[1], ' Cena:', Cena, ' 2:', n[2], ' Url:', n[3])
     # Udaje Old, Cena - 2. sloupec
     OldCena = dfXls.iloc[i, bbHlavCena]
     OldDelt = dfXls.iloc[i, bbHlavDlta]
     OldDate = dfXls.iloc[i, bbHlavDate]
     # zmena ceny string
     zc = ''
+    # Kdyz neni Zjistena cena
+    if Cena == 0:
+      Cena = OldCena
+      print('Cena nezjistena - ', ' Nazev:', n[0], ' Fce:', n[1], ' Url:', n[3], '!')
     # Je Zmena Ceny
     if Cena != OldCena:
       # Zmena ceny
@@ -73,14 +79,18 @@ def SaveXls(Dump=False):
       txt = n[0] + ': ' + str(Cena) + zc
       print(txt) if not(Dump) else None
       # Log protokol zmen - append to file - https://bit.ly/3mXdyhz
-      with open(bbLogFlNm, "a") as LogF:
+      with open(bbLogFlNm, "a", encoding='UTF-8') as LogF:
         LogF.write(txt+'\n')
     else:
       OldCena = dfXls.iloc[i, bbHlavOldC]
 
     # DataSet
-    bbprint('#', i, ': Nazev:', n[0], ' Cena:', Cena, ' OldCena:', OldCena, ' OldDelt:', OldDelt, ' n[3]:', n[3])
-    df.loc[i] = [n[0], Cena, OldCena, OldDelt, OldDate, n[3]]
+    brint('#', i, ': Nazev:', n[0], ' Cena:', Cena, ' OldCena:', OldCena, ' OldDelt:', OldDelt, ' n[3]:', n[3])
+    # url - https://bit.ly/3qJlRjq
+    # lnk = '=HYPERLINK("http://www.someurl.com", "some website")'
+    lnk = n[3]
+    # lnk = '=HYPERLINK("' + lnk + '", "' + lnk + '")'
+    df.loc[i] = [n[0], Cena, OldCena, OldDelt, OldDate, lnk]
     # Vypisuj?
     if Dump:
       # Zjisti cenu

@@ -3,7 +3,7 @@
 
 # Globalni promenne
 bbNmBB = 'BenzinBrno '
-bbNmVR = 0.21
+bbNmVR = 0.24
 # bbNmVE = 'v' + str(bbNmVR).format()
 bbNmVE = 'v' + '{:.2f}'.format(bbNmVR)
 bbNmDE = ' - Natural 95 prices in Brno - Python Version'
@@ -30,25 +30,40 @@ bbCenaMsk = '{:.2f}'  # format na 2 desetinna mista
 
 # bbPrintDebug
 # bbPrintDebug('Loc:', 'FceName','Var', Var )
-def bbprint(s1='', s2='', s3='', s4='', s5='', s6='', s7='', s8='', s9='', s10='', s11='', s12='', s13='', s14='',):
+def brint(s1='', s2='', s3='', s4='', s5='', s6='', s7='', s8='', s9='', s10='', s11='', s12='', s13='', s14='',):
   if not(bbNoBBprn):
+    # Dict vstupnich hodnot
+    ssAll = locals()
+    # Spojeni hodnot dict do retezce
+    ss = ' '.join(str(v) for v in ssAll.values())
     import inspect
     # akt fce
     # print(inspect.stack()[0][0].f_code.co_name)
     # predchozi funkce - stack[1]
     s0 = inspect.stack()[1][0].f_code.co_name + '/' + inspect.stack()[2][0].f_code.co_name + ': '
-    print(s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14)
+    print(s0, ss)
 
 # main
 def bbCFG_main():
   print("bbTtest:    ", bbTtest)
-  print("bbRender:    ", bbRender)
-  print("bbName:      ", bbName)
-  print("bbNmNM:      ", bbXlsShNm)
-  bbprint(' bbPrintDebug Test', 'je OK')
-  print("bbNmVE:      ", bbNmVE)
+  print("bbRender:   ", bbRender)
+  print("bbName:     ", bbName)
+  print("bbNmNM:     ", bbXlsShNm)
+  brint(' bbPrintDebug Test', 'je OK')
+  print("bbNmVE:     ", bbNmVE)
   print('OkDone.')
 
-# name__
+# __name__
 if __name__ == '__main__':
   bbCFG_main()
+  ProgramInfo = '''
+-----------------------------------------------------
+History:
+  29.11.2021
+0.22 - celkem funckni
+  29.11.2021 1
+0.23 - oprava kdyz na mapy.cz neni cena
+  30.11.2021
+0.24 - Shell Olomoucká: Mapy -> mBenz
+-----------------------------------------------------
+  '''

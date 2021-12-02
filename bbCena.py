@@ -8,8 +8,8 @@ def F(val):
   Returns:
       Naformatovana cena
   """
-  from bbCFG import bbprint, bbCenaNoF
-  bbprint("val:", val, '|| type:', type(val))
+  from bbCFG import brint, bbCenaNoF
+  brint("val:", val, '|| type:', type(val))
   Cena = F2f(val)
   # Formatovat?
   if (bbCenaNoF):
@@ -23,8 +23,8 @@ def F(val):
 
 # Formatuje real na 2 def mista, vraci real
 def F2f(val):
-  from bbCFG import bbprint, bbCenaMsk
-  bbprint("val:", val, '|| type:', type(val))
+  from bbCFG import brint, bbCenaMsk
+  brint("val:", val, '|| type:', type(val))
   # => float
   item = float(val)
   # 34.4  => 34,40 Kč
@@ -34,8 +34,8 @@ def F2f(val):
 
 # testovaci funkce
 def tF(val):
-  from bbCFG import bbprint, bbProduct
-  bbprint('tF:', 'val', val)
+  from bbCFG import brint, bbProduct
+  brint('tF:', 'val', val)
   if bbProduct:
     return F(val)
   else:
