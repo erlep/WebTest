@@ -1,4 +1,4 @@
-# Benzín Brno - bbTest.py - testovaci soubor
+﻿# Benzín Brno - bbTest.py - testovaci soubor
 
 from bbCFG import *
 from bbLog import *

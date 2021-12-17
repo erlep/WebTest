@@ -1,4 +1,4 @@
-# Benzín Brno - Globus - Natural - bbGlobus.py
+﻿# Benzín Brno - Globus - Natural - bbGlobus.py
 # https://www.globus.cz/brno/cerpaci-stanice-a-myci-linka.html
 
 # from bbCFG import *

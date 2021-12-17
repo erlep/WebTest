@@ -1,4 +1,4 @@
-# Benzín Brno - mBenzin.cz - bbmBenzin.py
+﻿# Benzín Brno - mBenzin.cz - bbmBenzin.py
 # https://www.mbenzin.cz/Nejlevnejsi-benzin/brno
 # Benzina Albert Modřice - https://bit.ly/3ltfpd1
 

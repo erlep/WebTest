@@ -1,4 +1,4 @@
-# Benzín Brno - bbSaveXls.py - vypise ceny jednotlivych benzinek - bbSaveXls.py
+﻿# Benzín Brno - bbSaveXls.py - vypise ceny jednotlivych benzinek - bbSaveXls.py
 # Ulozi ceny benzinek do Xls souboru
 
 # from bbCFG import *

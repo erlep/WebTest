@@ -1,4 +1,4 @@
-# Benzín Brno - bbLog.py - logovani data a casu
+﻿# Benzín Brno - bbLog.py - logovani data a casu
 
 # from bbCFG import *
 

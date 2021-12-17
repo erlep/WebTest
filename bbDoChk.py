@@ -1,4 +1,4 @@
-# Benzín Brno - bbDoChk.py - Kontrola cen na benzinkach
+﻿# Benzín Brno - bbDoChk.py - Kontrola cen na benzinkach
 # Pro JavaScript pouziva: selenium <-> playwright
 
 # Soubory

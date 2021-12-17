@@ -1,4 +1,4 @@
-# Benzín Brno - Makro - "Natural 95" - bbMakro.py
+﻿# Benzín Brno - Makro - "Natural 95" - bbMakro.py
 # https://www.makro.cz/prodejny/brno
 
 # from bbCFG import *

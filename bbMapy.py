@@ -1,4 +1,4 @@
-# Benzín Brno - Mapy.cz - https://bit.ly/3izRnLE - bbMapy.py
+﻿# Benzín Brno - Mapy.cz - https://bit.ly/3izRnLE - bbMapy.py
 # Pro JavaScript pouziva: selenium <-> playwright
 # bbMapy.py
 # from bbCFG import *

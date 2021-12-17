@@ -1,4 +1,4 @@
-# WebTest - pokus pro web dle bbNmVR = 0.28
+# WebTest - pokus pro web dle bbNmVR = 0.29
 
 BB StreamLit - <https://share.streamlit.io/erlep/webtest/main/bbWeb.py>
 

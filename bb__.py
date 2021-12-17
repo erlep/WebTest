@@ -1,4 +1,4 @@
-# Benzín Brno - bb__.py - hlavni soubor
+﻿# Benzín Brno - bb__.py - hlavni soubor
 # Pro JavaScript pouziva: selenium <-> playwright
 
 # Soubory

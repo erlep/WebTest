@@ -1,4 +1,4 @@
-# Benzín Brno - bbCFG.py - config file
+﻿# Benzín Brno - bbCFG.py - config file
 #  BenzinBrno v0.00 - Natural 95 prices in Brno - Python Version
 
 # Globalni promenne

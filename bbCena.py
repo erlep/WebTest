@@ -1,4 +1,4 @@
-# Benzín Brno - bbCena.py - pro vstupni real naformatuje cenu paliva: 34.4  => 34,40 Kč
+﻿# Benzín Brno - bbCena.py - pro vstupni real naformatuje cenu paliva: 34.4  => 34,40 Kč
 # from bbCFG import *
 
 def F(val):

@@ -1,4 +1,4 @@
-# Benzín Brno - TankONO - Natural "95" - pumpa: 'ČS Brno-Hviezdoslavova' - bbTankONO.py
+﻿# Benzín Brno - TankONO - Natural "95" - pumpa: 'ČS Brno-Hviezdoslavova' - bbTankONO.py
 # http://www.tank-ono.cz/cz/index.php?page=cenik
 
 # from bbCFG import bbprint

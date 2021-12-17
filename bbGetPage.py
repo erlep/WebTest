@@ -1,4 +1,4 @@
-# Benzín Brno - bbGetPage.py - stahne stranku
+﻿# Benzín Brno - bbGetPage.py - stahne stranku
 
 # Scrape a Dynamic Website with Python - https://bit.ly/3Dm2GPs
 # BeautifulSoup, Selenium, Pyppeteer, Playwright, and Web Scraping API + requests_html
